@@ -20,7 +20,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
+                    junit '/home/varuna/spring-petclinic/target/surefire-reports/*.xml'
                 }
             }
         }
