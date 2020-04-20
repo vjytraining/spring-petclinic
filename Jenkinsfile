@@ -1,7 +1,9 @@
 pipeline {
     agent {
         docker {
-            image 'sudo maven:3-alpine' 
+	    sudo usermod -a -G root jenkins
+            sudo service jenkins restart
+            image 'maven:3-alpine' 
             args '-v /root/.m2:/root/.m2' 
         }
     }
